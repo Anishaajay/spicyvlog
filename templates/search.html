@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body id="top">
+
+<div class="wrapper row3">
+  <main class="hoc container clear">
+
+    <section id="introblocks">
+      <ul class="nospace group btmspace-80">
+
+          {% for i in pr %}
+
+         <li class="one_third">
+          <figure><a class="imgover" href="{{i.get_url}}"><img src="{{i.image.url}}" alt="" style="height:500; width=500;"></a>
+            <figcaption>
+              <h6 class="heading">{{i.name}}</h6>
+              <p style="font-family:courier;">{{i.description|truncatewords:9}}</p>
+                <b> Price: RS {{i.price}}</b>
+                <br>
+                <p> Stock: {{i.stock}}</p>
+            </figcaption>
+          </figure>
+        </li>
+
+
+{% endfor %}
+
+
+
+
+    <hr class="btmspace-80">
+
+    <div class="clear"></div>
+  </main>
+</div>
+
+</div>
+
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<script src="{% static 'home/layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'home/layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'home/layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+
+ {% endblock %}

@@ -1,0 +1,130 @@
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Sislaf</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="static/home/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<!--<div class="bgded overlay"  style="background-image:url('home/images/demo/backgrounds/img.jpeg');">-->
+  <!-- ################################################################################################ -->
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1" >
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left">
+        <!-- ################################################################################################ -->
+        <h1><a href="/">AVODHA SHOPPING</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right">
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li><a href="/">Home</a></li>
+			<li class="active"><a href="login">Login</a></li>
+			<li><a href="register">Register</a></li>
+
+
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+</div>
+<style>
+
+.container {
+    padding: 50px;
+    background-color: pink;
+}
+
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+
+
+ div {
+            padding: 10px 0;
+         }
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.label{
+color:black;
+}
+
+</style>
+</head>
+
+<form action="login" method="post" class="shadow p-3 mb-5">
+	   {% csrf_token %}
+
+  <div class="container" style="background-color:maroon";>
+  <center> <h1>LOGIN</h1> </center>
+  <hr>
+
+	<label> Username: </label>
+	<input type="text" name="username" placeholder="Enter Username" size="15"required />
+
+
+    	<label for="psw">Password:</label>
+    	<input type="password" placeholder="Enter Password" name="psw" required />
+
+
+  	<button type="submit" class="registerbtn">Login</button>
+  </div>
+</form>
+<!--<hr class="btmspace-80">-->
+
+    <!--<div class="clear"></div>-->
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+
+</body>
+</html>

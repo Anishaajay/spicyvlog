@@ -1,0 +1,63 @@
+{% load static %}
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Sislaf</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'home/layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+.abcd{
+  height:100%;
+  background-position : center;
+  background-repeat : no repeat;
+  background-size:fit;
+  }
+</style>
+<body id="top">
+
+  <!-- ################################################################################################ -->
+
+  <!-- ################################################################################################ -->
+
+        <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1" >
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left">
+        <!-- ################################################################################################ -->
+        <h1><a href="index">AVODHA SHOPPING</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right">
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a class="drop" href="#">Filter</a>
+            <ul>
+                <li><a href="/">All</a></li>
+
+                 {% for i in ct %}
+                <li><a href={{i.get_url}}>{{i.name}}</a></li>
+                {% endfor %}
+
+                </ul></li>
+            <li><a href="{% url 'cart' %}">Cart</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="register">Register</a></li>
+            <li><a href="/">Logout</a></li>
+
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+
+</div>
+{% block content %}
+    {% endblock %}
+</body>
+</html>
